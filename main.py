@@ -9,11 +9,11 @@ def getTitle(url):
         return None
     try:
         bsObj = BeautifulSoup(html.read())
-        title = bsObj.body.h1
+        title = bsObj.tbody.td
     except ArithmeticError as e:
         return None
     return title
-title = getTitle("https://avanifull.com/")
+title = getTitle("http://www.880qp.net/AdminV2/Record/GameMoneyRecords.aspx")
 if title == None:
     print("出错了")
 else:
