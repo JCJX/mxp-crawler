@@ -1,4 +1,4 @@
-# -*- coding:utf-8 -*- -
+# -*- coding:utf-8 -*-
 from urllib.request import urlretrieve
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
