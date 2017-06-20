@@ -38,3 +38,4 @@ if len(captchaResponse) == 4:
         print(responseObj.find("title",{"id": "menubox"}).git_text())
     else:
         print("There was a problem reading the CAPTCHA correctly!")
+#TODO 改日再改
