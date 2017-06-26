@@ -9,7 +9,7 @@ animalist=bsobj.findAll("", {"class": "an-text"})
 for name in animalist:
    print(name.get_text())
 
-
+#TODO
 csvFile= open("../files/jun.cav", 'wt', nameline="", encoding="utf-8")
 writer=csv.writer(csvFile)
 try:
