@@ -2,7 +2,7 @@
 import csv
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-#获取蜜柑计划上的本季所有番剧
+#获取蜜柑计划上的番剧
 html=urlopen("http://mikanani.me/")
 bsobj=BeautifulSoup(html)
 animalist=bsobj.findAll("", {"class": "an-text"})
