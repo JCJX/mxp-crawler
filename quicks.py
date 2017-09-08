@@ -13,10 +13,10 @@ def cleanImage(imagePath):
     borderImage = ImageOps.expand(image, border=20, fill='white')
     borderImage.save(imagePath)
 
-html =urlopen("http://www.880qp.net/AdminV2/AdminLogin.aspx")
+html =urlopen("/AdminLogin.aspx")
 bsObj =BeautifulSoup(html)
 
-captchaUrl ="http://www.880qp.net/AdminV2/CheckCode.aspx"
+captchaUrl ="/CheckCode.aspx"
 urlretrieve(captchaUrl, "captcha.jpg")
 cleanImage("captcha.jpg")
 p = subprocess.Popen(["tesseract", "captcha.jpg", "captcha"],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
@@ -28,7 +28,7 @@ print("验证码解决方案尝试: "+captchaResponse)
 
 if len(captchaResponse) == 4:
     params ={'UserName': 'kefu880', 'UserPwd': '880880', "captcha_response":captchaResponse, "name": "Ryan Mitchell", "subject":"I come to seek the Grall", "comment_body[und][0][value]":"...and I am definitely not abot"}
-    r=requests.post("http://www.880qp.net/AdminV2/AdminLogin.aspx", date=params)
+    r=requests.post("/AdminLogin.aspx", date=params)
     responseObj = BeautifulSoup(r.text)
     if responseObj.find("title",{"id": "menubox"}) is not None:
         print(responseObj.find("title",{"id": "menubox"}).git_text())
