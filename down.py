@@ -2,8 +2,8 @@
 import csv
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-#获取蜜柑计划上的番剧
-html=urlopen("http://mikanani.me/")
+
+html=urlopen("")
 bsobj=BeautifulSoup(html)
 animalist=bsobj.findAll("", {"class": "an-text"})
 for name in animalist:
