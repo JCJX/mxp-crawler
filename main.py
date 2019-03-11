@@ -13,7 +13,7 @@ def getTitle(url):
     except ArithmeticError as e:
         return None
     return title
-title = getTitle("http://www.880qp.net/AdminV2/Record/GameMoneyRecords.aspx")
+title = getTitle("")
 if title == None:
     print("出错了")
 else:
